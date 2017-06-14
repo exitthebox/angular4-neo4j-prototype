@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+}
+.red-border{
+    border: .5px solid red;
+}
+.blue-border{
+    border: .5px solid darkblue;
+}
