@@ -1,1 +1,31 @@
 <h1>edit works!</h1>
+
+<!--this component will need to be placed on a form with a search field that looks for a neo4j node name. The results of that search
+will be output using this form-->
+
+<!--This component dynamically creates 2 form fields - name and amount. these will be changed for the neo4j implementation-->
+<div class="row">
+    <div class="col-xs-12">
+        <!--loop through each field returned from the fetch made in the ts file-->
+        <div class="row"
+        *ngFor="let ingredientCtrl of recipeForm.get('ingredients').controls; let i = index"
+            [formGroupName]="i">
+            <!--dynamically add these 2 fields for each field in ts file. TODO: update each input so it has a label-->
+            <!--TODO: add an input for relationships and an HTML label for the node name conected to this node displayed-->
+            <!--TODO: display the properties for each node or relationship. ideally it would be on a twisty or toggle to display-->
+            <div class="col-xs-6">
+            <input
+                type="text"
+                class="form-control"
+                formControlName="name">
+            </div>
+            <div class="col-xs-6">
+            <input
+                type="text"
+                class="form-control"
+                formControlName="amount">
+            </div>
+            <!--TODO: add a button to drill into each node returned and see the 1st level, direct nodes and relationships for it-->
+        </div>
+    </div>
+</div>
